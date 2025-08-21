@@ -38,66 +38,29 @@ function App() {
   };
   return (
     <>
-      {/* Navigation Bar */}
       <nav className="navbar navbar-expand-lg position-fixed w-100" style={{ backgroundColor: '#001122ff', zIndex: 1000 }}>
-        {/* Logo */}
         <Link href="/" className="d-flex align-items-center ps-4 text-decoration-none">
-          <TbLetterNSmall
-            className="text-white me-2"
-            style={{
-              background: "linear-gradient(to right, #ff4800ff, #c41d00ff)",
-              borderRadius: "10px",
-              fontSize: "50px",
-              boxShadow: "0 0 10px 1px #ff4800cc",
-            }}
-          />
+          <TbLetterNSmall className="text-white me-2"
+            style={{background: "linear-gradient(to right, #ff4800ff, #c41d00ff)",
+              borderRadius: "10px",fontSize: "50px",boxShadow: "0 0 10px 1px #ff4800cc",}}/>
           <span className="navbar-brand playfair-font text-white mb-0">Nayakar Naidu Peravai</span>
         </Link>
-
-        {/* Toggler Button */}
-        <button
-          className="navbar-toggler ms-auto me-4"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          style={{ background: "linear-gradient(to right, #ff4800ff, #c41d00ff)", border: "none" }}
-        >
-          <GiHamburgerMenu className="text-white" style={{ fontSize: '25px' }} />
-        </button>
-
-        {/* Collapsible Section */}
+        <button className="navbar-toggler ms-auto me-4"
+          type="button"data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+          style={{ background: "linear-gradient(to right, #ff4800ff, #c41d00ff)", border: "none" }}>
+          <GiHamburgerMenu className="text-white" style={{ fontSize: '25px' }} /></button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          {/* Language Toggle */}
-          <div
-            className="d-flex justify-content-center justify-content-lg-start mx-auto mx-lg-0 my-3 my-lg-0 gap-3"
-            style={{
-              backgroundColor: '#041a30ff',
-              borderRadius: '50px',
-              padding: '8px 25px',
-              width: "fit-content" // keeps background same size, only wraps around buttons
-            }}
-          >
-            <button
-              className="btn border-0"
+          <div className="d-flex justify-content-center justify-content-lg-start mx-auto mx-lg-0 my-3 my-lg-0 gap-3"
+            style={{backgroundColor: '#041a30ff',
+              borderRadius: '50px',padding: '8px 25px',width: "fit-content"}}>
+            <button className="btn border-0"
               style={language === "english" ? langactiveStyle : langinactiveStyle}
-              onClick={() => handleLanguageChange("english")}
-            >
-              English
-            </button>
-            <button
-              className="btn border-0"
+              onClick={() => handleLanguageChange("english")}>English </button>
+            <button className="btn border-0"
               style={language === "tamil" ? langactiveStyle : langinactiveStyle}
-              onClick={() => handleLanguageChange("tamil")}
-            >
-              Tamil
-            </button>
+              onClick={() => handleLanguageChange("tamil")}>Tamil</button>
           </div>
-
-
-          {/* Navigation Links */}
           <ul className="navbar-nav ms-lg-auto text-center mt-3 me-3 mt-lg-0 gap-2">
             <li className="nav-item">
               <Link className="nav-link text-white" href="/">Home</Link>
@@ -115,23 +78,11 @@ function App() {
               <Link className="nav-link text-white" href="#">Events</Link>
             </li>
           </ul>
-
-          {/* Buttons */}
           <div className="d-flex justify-content-center mt-3 me-4 mt-lg-0 pb-lg-0 pb-3 gap-3">
-            <button
-              className="btn"
-              style={activeButton === "login" ? activeStyle : inactiveStyle}
-              onClick={() => handleClick("login")}
-            >
-              Login
-            </button>
-            <button
-              className="btn"
-              style={activeButton === "register" ? activeStyle : inactiveStyle}
-              onClick={() => handleClick("register")}
-            >
-              Register
-            </button>
+            <button className="btn"style={activeButton === "login" ? activeStyle : inactiveStyle}
+              onClick={() => handleClick("login")}>Login</button>
+            <button className="btn"style={activeButton === "register" ? activeStyle : inactiveStyle}
+              onClick={() => handleClick("register")}>Register</button>
           </div>
         </div>
       </nav>

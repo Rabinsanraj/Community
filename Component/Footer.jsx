@@ -24,62 +24,30 @@ export function Footer() {
 
                         {/* Social Icons */}
                         <ul className="list-unstyled d-flex justify-content-center justify-content-md-start gap-3 mb-0">
-                            <li
-                                style={{
-                                    backgroundColor: "gray",
-                                    width: "40px",
-                                    height: "40px",
-                                    borderRadius: "50%",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                }}
-                            >
+                            <li style={{
+                                backgroundColor: "gray", width: "40px", height: "40px", borderRadius: "50%",
+                                display: "flex", alignItems: "center", justifyContent: "center",}}>
                                 <Link className="text-white fs-5">
                                     <FaFacebookF />
                                 </Link>
                             </li>
-                            <li
-                                style={{
-                                    backgroundColor: "gray",
-                                    width: "40px",
-                                    height: "40px",
-                                    borderRadius: "50%",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                }}
-                            >
+                            <li style={{
+                                    backgroundColor: "gray", width: "40px", height: "40px", borderRadius: "50%",
+                                    display: "flex", alignItems: "center", justifyContent: "center",}}>
                                 <Link className="text-white fs-5">
                                     <FaTwitter />
                                 </Link>
                             </li>
-                            <li
-                                style={{
-                                    backgroundColor: "gray",
-                                    width: "40px",
-                                    height: "40px",
-                                    borderRadius: "50%",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                }}
-                            >
+                            <li style={{
+                                backgroundColor: "gray", width: "40px", height: "40px", borderRadius: "50%",
+                                display: "flex", alignItems: "center", justifyContent: "center",}}>
                                 <Link className="text-white fs-5">
                                     <FaInstagram />
                                 </Link>
                             </li>
-                            <li
-                                style={{
-                                    backgroundColor: "gray",
-                                    width: "40px",
-                                    height: "40px",
-                                    borderRadius: "50%",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                }}
-                            >
+                            <li style={{
+                                backgroundColor: "gray", width: "40px", height: "40px", borderRadius: "50%",
+                                display: "flex", alignItems: "center", justifyContent: "center",}}>
                                 <Link className="text-white fs-5">
                                     <FaLinkedinIn />
                                 </Link>
