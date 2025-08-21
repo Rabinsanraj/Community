@@ -40,13 +40,12 @@ export function Firstpage() {
     <>
       <div className="firstpage container-fluid position-relative d-flex flex-column justify-content-between"
         style={{backgroundImage: `url(${darkimg})`,backgroundSize: "cover",backgroundPosition: "center",  
-        backgroundRepeat: "no-repeat",width: "100%",Height: "100%",}}>
+        backgroundRepeat: "no-repeat",width: "100%",minHeight: "100vh",}}>
         
-        <div style={{
-          position: "absolute", top: 0, left: 0, right: 0, bottom: 0,
+        <div style={{position: "absolute", top: 0, left: 0, right: 0, bottom: 0,
           backgroundColor: "rgba(0,0,0,0.5)"}}></div>
         <div className=" flex-column d-flex justify-content-center align-items-center position-relative"
-        style={{paddingTop:"100px"}}>
+        style={{paddingTop:"130px"}}>
           <RiBankFill style={{ color: "#ff4800", fontSize: "4rem" }} />
           <h1 className="text-center display-5 text-white fw-bold pt-5">
             Orunginaintha Nayakar Naidu Peravai</h1>
@@ -58,7 +57,7 @@ export function Firstpage() {
             Connecting our community, sharing opportunities, building our future <br />
             together with tradition, unity and progress
           </p>
-          <div className="d-flex gap-2 pt-5 pb-5 justify-content-center flex-wrap">
+          <div className="d-flex gap-3 pt-5 pb-5 justify-content-center flex-wrap">
             <button className="btn"
               style={activeButton === "join our community" ? activeStyle : inactiveStyle}
               onClick={() => handleButtonClick("join our community")}>
@@ -152,7 +151,7 @@ export function Firstpage() {
               border: "none",borderRadius: "30px",}}>Register Now - it’s Free!</button>
         </div>
       </div>
-      
+
     </>
   )
 }

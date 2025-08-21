@@ -86,7 +86,7 @@ function App() {
           </div>
         </div>
       </nav>
-      <div style={{ paddingTop: "65px", }}>
+      <div style={{ paddingTop: "0px", }}>
 
         <Routes>
           <Route path="/" element={<Firstpage />} />
