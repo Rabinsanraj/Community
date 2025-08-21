@@ -12,8 +12,6 @@ export function Footer() {
         <footer className="text-center text-lg-start text-white" style={{ backgroundColor: '#0e182e' }}>
             <div className="container py-5">
                 <div className="row gy-4">
-
-                    {/* Left: About + Social */}
                     <div className="col-lg-5 col-md-6 text-center text-md-start">
                         <h5 className="mb-3 text-white">NaickerPeravai</h5>
                         <p className="text-white-50 mb-3">
@@ -21,8 +19,6 @@ export function Footer() {
                             tradition, and progress. Join us in building a<br />
                             better future while honoring our heritage.
                         </p>
-
-                        {/* Social Icons */}
                         <ul className="list-unstyled d-flex justify-content-center justify-content-md-start gap-3 mb-0">
                             <li style={{
                                 backgroundColor: "gray", width: "40px", height: "40px", borderRadius: "50%",
@@ -55,7 +51,6 @@ export function Footer() {
                         </ul>
                     </div>
 
-                    {/* Quick Links */}
                     <div className="col-lg-3 col-md-6 text-center text-md-start">
                         <h5 className="mb-3 text-white">Quick Links</h5>
                         <ul className="list-unstyled">
