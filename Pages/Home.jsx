@@ -38,26 +38,46 @@ export function Firstpage() {
   };
   return (
     <>
-      <div className="firstpage container-fluid d-flex flex-column justify-content-between"
-        style={{backgroundImage: `url(${darkimg})`,backgroundSize: "cover",backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",backgroundAttachment: "scroll",width: "100%",
-          minHeight: "100vh",}}>
-        <div className='pt-5 flex-column d-flex justify-content-center align-items-center'>
+      <div className="firstpage container-fluid position-relative d-flex flex-column justify-content-between"
+        style={{
+          backgroundImage: `url(${darkimg})`,
+          backgroundSize: "cover",       // fills screen
+          backgroundPosition: "center",  // centers image
+          backgroundRepeat: "no-repeat",
+          width: "100%",
+          Height: "100%",
+        }}>
+
+        {/* Dark overlay for readability */}
+        <div style={{
+          position: "absolute",
+          top: 0, left: 0, right: 0, bottom: 0,
+          backgroundColor: "rgba(0,0,0,0.5)"
+        }}></div>
+
+        {/* Your Content */}
+        <div className=" flex-column d-flex justify-content-center align-items-center position-relative"
+        style={{paddingTop:"100px"}}>
           {/* Top Icon */}
-          <RiBankFill className='overflow-hidden' style={{ color: "#ff4800", fontSize: "4rem", }} />
+          <RiBankFill style={{ color: "#ff4800", fontSize: "4rem" }} />
+
           {/* Main Heading */}
-          <h1 className='text-center display-5 text-white fw-bold ' style={{
-            paddingTop: "100px", }}>
-            Orunginaintha Nayakar Naidu Peravai</h1>
-          <div className='mx-auto ' style={{
-            paddingTop: "0px", height: "4px",
-            width: "100px", borderRadius: "20px",
-            background: "linear-gradient(to right,  #ff4800, #c41d00)",
+          <h1 className="text-center display-5 text-white fw-bold pt-5">
+            Orunginaintha Nayakar Naidu Peravai
+          </h1>
+
+          {/* Underline */}
+          <div className="mx-auto mt-2" style={{
+            height: "4px", width: "100px", borderRadius: "20px",
+            background: "linear-gradient(to right,  #ff4800, #c41d00)"
           }}></div>
+
           {/* Subtext */}
-          <p className='text-white text-center pt-3' style={{ fontWeight: "lighter" }}>
+          <p className="text-white text-center pt-3 fw-light">
             Connecting our community, sharing opportunities, building our future <br />
-            together with tradition, unity and progress</p>
+            together with tradition, unity and progress
+          </p>
+
           {/* Buttons */}
           <div className="d-flex gap-2 pt-5 pb-5 justify-content-center flex-wrap">
             <button className="btn"
@@ -71,12 +91,13 @@ export function Firstpage() {
               Explore Features
             </button>
           </div>
-          <div className="pt-5 pb-5" onClick={handleScroll} style={{ cursor: "pointer" }}>
-            <FaArrowDown className='fs-3' style={{ color: "#c41d00" }} />
-          </div>
-       </div>
-      </div>
 
+          {/* Scroll Down Arrow */}
+          <div className="pt-5 pb-5" onClick={handleScroll} style={{ cursor: "pointer" }}>
+            <FaArrowDown className="fs-3" style={{ color: "#c41d00" }} />
+          </div>
+        </div>
+      </div>
 
       <div className='container-fluid' style={{ backgroundColor: "#e0e0e0ff" }}>
         <h1 className='fs-3 text-center pt-5 fw-bold'>Our Growing Community</h1>
@@ -134,22 +155,61 @@ export function Firstpage() {
         </div>
       </div>
 
-      <div className="container-fluid" style={{ backgroundColor: "#121f38" }}>
-        <div className="d-flex justify-content-center pt-5">
-          <RiBankFill style={{ color: "#ff4800", fontSize: "70px",}} />
+      <div className="container-fluid py-5" style={{ backgroundColor: "#121f38" }}>
+        {/* Icon */}
+        <div className="d-flex justify-content-center">
+          <RiBankFill style={{ color: "#ff4800", fontSize: "60px" }} />
         </div>
-        <h1 className='fw-lighter text-center pt-5 text-white' style={{fontSize:"50px"}}>Join Our Growing Community</h1>
-        <div className='mx-auto' style={{height: "4px", width: "100px", borderRadius: "20px",
-          background: "linear-gradient(to right,  #ff4800, #c41d00)",
-        }}></div>
-        <p className='text-white text-center fw-lighter pt-3'style={{fontSize:"20px"}}>Connect with fellow community members, find opportunities a build a stronger future</p>
-        <p className='text-white text-center fw-lighter'>together with tradition and progress</p>
-        <div className='container mx-auto d-flex justify-content-center pt-3 pb-5'>
-          <button className='btn btn-light fw-bold' style={{
-            background: "linear-gradient(to right, #ff4800, #c41d00)", color: "white",
-            border: "none"}}>Register Now - it`s Free!</button>
+
+        {/* Title */}
+        <h1
+          className="fw-lighter text-center text-white pt-4"
+          style={{ fontSize: "clamp(28px, 5vw, 50px)" }}
+        >
+          Join Our Growing Community
+        </h1>
+
+        {/* Divider */}
+        <div
+          className="mx-auto my-3"
+          style={{
+            height: "4px",
+            width: "100px",
+            borderRadius: "20px",
+            background: "linear-gradient(to right,  #ff4800, #c41d00)",
+          }}
+        ></div>
+
+        {/* Description */}
+        <p
+          className="text-white text-center fw-lighter"
+          style={{ fontSize: "clamp(16px, 3.5vw, 20px)", marginBottom: "6px" }}
+        >
+          Connect with fellow community members, find opportunities and build a stronger future
+        </p>
+        <p
+          className="text-white text-center fw-lighter mb-4"
+          style={{ fontSize: "clamp(16px, 3.5vw, 20px)" }}
+        >
+          together with tradition and progress
+        </p>
+
+        {/* Button */}
+        <div className="d-flex justify-content-center">
+          <button
+            className="btn fw-bold px-4 py-2"
+            style={{
+              background: "linear-gradient(to right, #ff4800, #c41d00)",
+              color: "white",
+              border: "none",
+              borderRadius: "30px",
+            }}
+          >
+            Register Now - it’s Free!
+          </button>
         </div>
       </div>
+
     </>
   )
 }

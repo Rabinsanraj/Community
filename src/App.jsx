@@ -39,52 +39,102 @@ function App() {
   return (
     <>
       {/* Navigation Bar */}
-      <nav className="navbar navbar-expand-lg position-fixed w-100" style={{ backgroundColor: '#001122ff' }}>
-        <Link href="/" className="ps-4"><TbLetterNSmall className="text-white me-2" style={{
-          background: "linear-gradient(to right, #ff4800ff, #c41d00ff)",
-          borderRadius: "10px", fontSize: "50px", boxShadow: "0 0 10px 1px #ff4800cc",
-        }} /></Link>
-        <Link className="navbar-brand playfair-font text-white" href="/">Nayakar Naidu Peravai</Link>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-          aria-label="Toggle navigation" style={{ background: "linear-gradient(to right, #ff4800ff, #c41d00ff)", border: "none", }}>
-          <GiHamburgerMenu className='text-white' style={{ fontSize: '25px' }} />
-        </button>
-        <div className="collapse navbar-collapse gap-5" id="navbarNav">
+      <nav className="navbar navbar-expand-lg position-fixed w-100" style={{ backgroundColor: '#001122ff', zIndex: 1000 }}>
+        {/* Logo */}
+        <Link href="/" className="d-flex align-items-center ps-4 text-decoration-none">
+          <TbLetterNSmall
+            className="text-white me-2"
+            style={{
+              background: "linear-gradient(to right, #ff4800ff, #c41d00ff)",
+              borderRadius: "10px",
+              fontSize: "50px",
+              boxShadow: "0 0 10px 1px #ff4800cc",
+            }}
+          />
+          <span className="navbar-brand playfair-font text-white mb-0">Nayakar Naidu Peravai</span>
+        </Link>
 
-          <div className="d-flex mx-auto ms-5 gap-3" style={{ backgroundColor: '#041a30ff', borderRadius: '50px', padding: '8px 25px' }}>
-            <button className="btn border-0" style={language === "english" ? langactiveStyle : langinactiveStyle}
-              onClick={() => handleLanguageChange("english")}>English</button>
-            <button className="btn border-0" style={language === "tamil" ? langactiveStyle : langinactiveStyle}
-              onClick={() => handleLanguageChange("tamil")}>Tamil</button>
+        {/* Toggler Button */}
+        <button
+          className="navbar-toggler ms-auto me-4"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          style={{ background: "linear-gradient(to right, #ff4800ff, #c41d00ff)", border: "none" }}
+        >
+          <GiHamburgerMenu className="text-white" style={{ fontSize: '25px' }} />
+        </button>
+
+        {/* Collapsible Section */}
+        <div className="collapse navbar-collapse" id="navbarNav">
+          {/* Language Toggle */}
+          <div
+            className="d-flex justify-content-center justify-content-lg-start mx-auto mx-lg-0 my-3 my-lg-0 gap-3"
+            style={{
+              backgroundColor: '#041a30ff',
+              borderRadius: '50px',
+              padding: '8px 25px',
+              width: "fit-content" // keeps background same size, only wraps around buttons
+            }}
+          >
+            <button
+              className="btn border-0"
+              style={language === "english" ? langactiveStyle : langinactiveStyle}
+              onClick={() => handleLanguageChange("english")}
+            >
+              English
+            </button>
+            <button
+              className="btn border-0"
+              style={language === "tamil" ? langactiveStyle : langinactiveStyle}
+              onClick={() => handleLanguageChange("tamil")}
+            >
+              Tamil
+            </button>
           </div>
 
-          <ul className="d-flex gap-2 navbar-nav ms-auto">
-            <li className="nav-item ">
-              <Link className="nav-link text-white hover:text-info" href="/">Home</Link>
+
+          {/* Navigation Links */}
+          <ul className="navbar-nav ms-lg-auto text-center mt-3 me-3 mt-lg-0 gap-2">
+            <li className="nav-item">
+              <Link className="nav-link text-white" href="/">Home</Link>
             </li>
-            <li className="nav-item ">
+            <li className="nav-item">
               <Link className="nav-link text-white" href="#">Communities</Link>
             </li>
-            <li className="nav-item ">
+            <li className="nav-item">
               <Link className="nav-link text-white" href="#">Jobs</Link>
             </li>
-            <li className="nav-item ">
+            <li className="nav-item">
               <Link className="nav-link text-white" href="#">Schemes</Link>
             </li>
-            <li className="nav-item ">
+            <li className="nav-item">
               <Link className="nav-link text-white" href="#">Events</Link>
             </li>
           </ul>
-          <div className="d-flex gap-1">
-            <button className="btn me-4" style={activeButton === "login" ? activeStyle : inactiveStyle}
-              onClick={() => handleClick("login")}>Login</button>
-            <button className="btn me-4" style={activeButton === "register" ? activeStyle : inactiveStyle}
-              onClick={() => handleClick("register")}>Register</button>
+
+          {/* Buttons */}
+          <div className="d-flex justify-content-center mt-3 me-4 mt-lg-0 pb-lg-0 pb-3 gap-3">
+            <button
+              className="btn"
+              style={activeButton === "login" ? activeStyle : inactiveStyle}
+              onClick={() => handleClick("login")}
+            >
+              Login
+            </button>
+            <button
+              className="btn"
+              style={activeButton === "register" ? activeStyle : inactiveStyle}
+              onClick={() => handleClick("register")}
+            >
+              Register
+            </button>
           </div>
         </div>
       </nav>
-
       <div style={{ paddingTop: "65px", }}>
 
         <Routes>
